@@ -32,7 +32,12 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="welcome" options={{ headerShown: false }} />
+<<<<<<< HEAD
         <Stack.Screen name="login" />
+=======
+        <Stack.Screen name="login" options={{ headerShown: false }} />
+        <Stack.Screen name="register" options={{ headerShown: false }} />
+>>>>>>> 6784a71 (refactor:remanejamento de local de diretorio)
       </Stack>
     //  <StatusBar style="auto" />
    // </ThemeProvider>
