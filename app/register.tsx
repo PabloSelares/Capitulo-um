@@ -40,7 +40,13 @@ const Register = () => {
     }
     return null;
   };
-
+  const handleErrorRepitir = () => {
+    if (formSubmitted) {
+      if (!repetirSenha) return <Text style={styles.error}>Campo obrigatório</Text>;
+      if (repetirSenha !== senha) return <Text style={styles.error}>As senhas não coincidem</Text>;
+    }
+    return null;
+  };
   const handleRegister = async () => {
     setFormSubmitted(true);
     let hasError = false;
@@ -136,7 +142,9 @@ const Register = () => {
             placeholderTextColor="#555"
             secureTextEntry
             style={styles.input}
+
           />
+          { handleErrorRepitir ()}
         </View>
 
         <TouchableOpacity style={[styles.button, styles.loginButton]} onPress={validateForm}>

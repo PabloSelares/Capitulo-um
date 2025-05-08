@@ -2,14 +2,11 @@ import { LinearGradient } from 'expo-linear-gradient';
 import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, TextInput, Image } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
-<<<<<<< HEAD
 
-const Welcome = () => {
-=======
 import { useRouter } from 'expo-router';
 const Welcome = () => {
     const router = useRouter()
->>>>>>> 6784a71 (refactor:remanejamento de local de diretorio)
+
   return (
     <LinearGradient
       colors={['#00c6ff', '#0072ff']}
@@ -25,19 +22,13 @@ const Welcome = () => {
           <Text style={styles.subtitle}>Sua jornada começa aqui</Text>
         </View>
 
-<<<<<<< HEAD
-        <TouchableOpacity style={[styles.button, styles.loginButton]}>
-          <Text style={styles.buttonText}>Login</Text>
-        </TouchableOpacity> 
-        
-        <TouchableOpacity style={[styles.button, styles.registerButton]}>
-=======
+
         <TouchableOpacity style={[styles.button, styles.loginButton]} onPress={()=>router.replace('/login')}>
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity> 
         
         <TouchableOpacity style={[styles.button, styles.registerButton]} onPress={()=>router.replace('/register')}>
->>>>>>> 6784a71 (refactor:remanejamento de local de diretorio)
+
           <Text style={[styles.buttonText, styles.registerButtonText]}>Registrar</Text>
         </TouchableOpacity> 
       </View>    
